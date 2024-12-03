@@ -94,6 +94,9 @@ body {
 
 /* Color más popular */
 #popular-color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
     background: rgba(255, 255, 255, 0.2);

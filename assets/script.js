@@ -41,8 +41,27 @@ function getMostPopularColor() {
 // Función para actualizar el mensaje dinámico del color más popular
 function updatePopularColorMessage() {
     const { mostPopular, maxVotes } = getMostPopularColor();
-    popularColorMessage.textContent = `El color más popular es: ${mostPopular} con ${maxVotes} voto(s).`;
+
+    // Limpiar contenido actual del mensaje
+    popularColorMessage.innerHTML = "";
+
+    // Crear texto dinámico
+    const textNode = document.createTextNode(`El color más popular con ${maxVotes} voto(s) es: `);
+
+    // Crear el círculo que representa el color más popular
+    const colorCircle = document.createElement("span");
+    colorCircle.style.display = "inline-block";
+    colorCircle.style.width = "30px";
+    colorCircle.style.height = "30px";
+    colorCircle.style.marginLeft = "8px";
+    colorCircle.style.borderRadius = "50%";
+    colorCircle.style.backgroundColor = mostPopular;
+
+    // Agregar el texto y el círculo al mensaje
+    popularColorMessage.appendChild(textNode);
+    popularColorMessage.appendChild(colorCircle);
 }
+
 
 // Función para crear un nuevo color en la pista de baile
 function createColorElement(color) {
