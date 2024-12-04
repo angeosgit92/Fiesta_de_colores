@@ -8,6 +8,10 @@ const popularColorMessage = document.getElementById("popular-color");
 const addColorSound = document.getElementById("add-color-sound");
 const resetSound = document.getElementById("reset-sound");
 const clickColorSound = document.getElementById("click-color-sound");
+const backgroundMusic = document.getElementById("background-music");
+
+//Volumen de fondo
+backgroundMusic.volume = 0.1;
 
 // Objeto para registrar los votos
 const colorVotes = {};
